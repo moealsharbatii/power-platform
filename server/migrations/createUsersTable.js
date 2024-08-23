@@ -5,6 +5,7 @@ export const users = sqliteTable("Users", {
   email: text("email").unique().notNull(),
   password: text("password").notNull(),
   username: text("username").unique().notNull(),
+  currBlock: File("currBlock").unique().notNull(), // Should be a way to discover the latest current block of the athlete
 });
 
 /**
